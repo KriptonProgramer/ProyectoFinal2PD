@@ -1,0 +1,449 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif;
+    background-color: #0770fd; /* Fondo suave */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    /* background-color: #c70202; Blanco limpio */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 100%;                 
+    max-height: 250px;          
+    display: flex;              
+    justify-content: center;    
+    align-items: center;        
+    overflow: hidden;   
+    margin-top: 10px;
+}
+
+.logoIdx img {
+    max-width: 100%;  /* La imagen se ajusta al ancho del contenedor */
+    max-height: 250px;    /* Mantiene la proporción de la imagen */
+    object-fit: cover; 
+    margin-top: 5px;
+}
+
+
+.logoIdx {
+    text-align: center;
+    width: 100%;
+    background-color: #0770fd;
+    object-fit: contain;
+}
+
+
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #343a40; /* Gris oscuro */
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #1184f7; /* Gris claro */
+    color: #ffffff; /* Azul primario */
+}
+
+main.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.main-content {
+    display: flex;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(168, 4, 4, 0.1);
+
+}
+
+.asideLeft,
+.asideRight {
+    background-color: #f8f9fa; /* Gris muy claro */
+    height: 300px; 
+    padding: 20px;
+    width: 200px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+    flex-grow: 1; 
+    background-color: #ffffff; /* Blanco */
+    padding: 20px;
+    margin: 0 20px; 
+    box-shadow: 0 2px 10px rgba(7, 83, 224, 0.1);
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    border: 1px solid #dee2e6; /* Borde gris claro */
+    border-radius: 5px;
+    overflow: hidden;
+    transition: box-shadow 0.3s, transform 0.3s;
+    background-color: #ffffff; 
+    flex: 1 1 calc(25% - 15px); 
+    margin-bottom: 20px; 
+    min-height: 250px; 
+}
+
+.card:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-5px); 
+}
+
+.card-img-top {
+    width: 100%; 
+    max-height: 700px; 
+    object-fit: cover; 
+}
+
+.card-body {
+    padding: 15px; 
+    display: flex; 
+    flex-direction: column; 
+    flex-grow: 1; 
+}
+
+.card-title {
+    font-size: 1.25rem; 
+    margin: 0 0 10px 0; 
+    color: #212529; /* Color negro */
+}
+
+.card-text {
+    font-size: 1rem; 
+    color: #6c757d; /* Gris medio */
+    flex-grow: 1; 
+}
+
+.card-price {
+    text-align: center;
+    font-weight: bold; 
+    color: #007bff; /* Azul primario */
+    margin: 10px 0; 
+}
+
+.btn {
+    align-self: stretch; 
+    margin-top: 10px; 
+    background-color: #007bff; 
+    border: none; 
+    color: white; 
+    padding: 10px; 
+    text-align: center; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    transition: background-color 0.3s; 
+}
+
+.btn:hover {
+    background-color: #0056b3; 
+}
+
+@media screen and (max-width: 768px) {
+    main.content-wrapper {
+        flex-direction: column;
+        padding: 20px; /* Ajustar el padding para móviles */
+    }
+
+    .asideLeft, .asideRight {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .section {
+        margin: 0; 
+        box-shadow: none; 
+    }
+
+    .card {
+        flex: 1 1 100%; 
+    }
+}
+
+#loading {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2rem;
+    color: #6c757d; /* Gris medio */
+}
+
+.detail {
+    border: 1px solid #e0e0e0; 
+    border-radius: 0.5rem; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    overflow: hidden; 
+}
+
+#detail-body {
+    display: flex;
+    flex-direction: column; 
+    padding: 15px; 
+}
+
+#detail-title {
+    font-size: 1.5rem; 
+    margin-bottom: 10px; 
+    color: #212529; /* Color negro */
+}
+
+#detail-price {
+    font-size: 1.5rem; 
+    margin-bottom: 5px; 
+    color: #28a745; /* Verde */
+}
+
+.text-muted {
+    font-size: 1rem; 
+    margin-bottom: 15px; 
+    color: #6c757d; /* Gris medio */
+}
+
+.button-container {
+    display: flex; 
+    flex-direction: column; 
+}
+
+.button-container > button {
+    margin-bottom: 10px; 
+    flex: 1; 
+}
+
+.button-container > button:last-child {
+    margin-bottom: 0; 
+}
+
+#detail-img {
+    width: 100%; 
+    max-height: 550px; 
+    height: auto; 
+    object-fit: contain; 
+    padding: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.thumbnail {
+    max-width: 120px; 
+    max-height: 120px; 
+    border: 1px black solid; 
+    margin-right: 10px; 
+    margin-left: 10px; 
+    margin-bottom: 10px; 
+    cursor: pointer; 
+}
+
+.thumbnail-container {
+    display: flex; 
+    overflow-x: auto; 
+}
+
+.thumbnail:hover {
+    border-color: #007bff; 
+}
+
+.carousel-container {
+    margin: 20px auto; 
+    max-width: 90%; 
+    background-color: #f9f9f9; 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.carousel-inner-carousel {
+    display: flex; 
+}
+
+.carousel-item-carousel {
+    display: flex; 
+    justify-content: center; 
+    min-width: 100%; 
+}
+
+.card-carousel {
+    width: 100%; 
+    max-width: 250px; 
+    margin: 0 10px; 
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: box-shadow 0.3s, transform 0.3s;
+    background-color: #ffffff; 
+}
+
+hr.custom-hr {
+    border: none;
+    height: 2px;
+    background-color: #ff4d4d; 
+    margin: 20px 0;
+}
+
+#searchForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+#searchQuery {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#searchQuery:focus {
+    border-color: #007bff; 
+}
+
+#searchForm button {
+    padding: 10px 20px;
+    background-color: #007bff; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#searchForm button:hover {
+    background-color: #0056b3; 
+}
+
+@media (max-width: 600px) {
+    #searchQuery {
+        width: 100%;
+    }
+
+    #searchForm {
+        flex-direction: column;
+    }
+
+    #searchForm button {
+        /* margin-left: 0; */
+        margin-top: 10px;
+        width: 20px;
+    }
+}
+/* Ajustes para pantallas más pequeñas (móviles) */
+@media (max-width: 768px) {
+    .logoIdx img {
+        object-fit: contain;
+        width: 100%;    /* Hace que la imagen ocupe el ancho completo en móviles */
+        height: auto;   /* Ajusta la altura automáticamente para mantener proporción */
+    }
+    #searchQuery {
+        width: 100%;
+    }
+
+    #searchForm {
+        flex-direction: column;
+    }
+
+    #searchForm button {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 50%;
+    }
+}
+
+.imgAvi {
+    width: 150px;
+}
+/* Estilos generales de la tabla */
+/* Estilos generales de la tabla */
+.table-class {
+    width: 80%;
+    border-collapse: separate;
+    font-family: 'Bahnschrift', sans-serif;
+    color: #1f3e75;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* Ajuste para centrar la tabla */
+
+}
+
+/* Encabezado de la tabla */
+.header-class {
+    background-color: #0b57db;
+    color: rgb(255, 255, 255);
+    font-family: 'ARIAL', sans-serif;
+    font-weight: bold;
+    font-style: impact;
+    text-align: center;
+    padding: 14px;
+    font-size: 18px;
+    border-bottom: 3px solid #0770fd;
+    text-transform: uppercase;
+
+}
+
+/* Filas de la tabla */
+.row-class {
+    background-color: white;
+    border-bottom: 1px solid #d9d9d9;
+    transition: background-color 0.3s ease;
+}
+
+.row-class:nth-child(even) {
+    background-color: #f4f8fc;
+}
+
+/* Celdas de la tabla */
+.cell-class {
+    padding: 12px 15px;
+    border-right: 1px solid #d9d9d9;
+    text-align: left;
+}
+
+/* Última celda no tiene borde derecho */
+.cell-class:last-child {
+    border-right: none;
+}
+
+/* Hover para resaltar filas */
+.table-class tr:hover {
+    background-color: #e3eaf6;
+}
+
+/* Opcional: ID de tabla personalizado */
+
+
+
+/* ID de tabla personalizado, si es necesario */
+#tabla-dinamica{
+    border: 2px solid #1f3e75;
+    margin-top: 20px;
+    align-content: center;
+}
