@@ -633,12 +633,12 @@ class WEB extends STC
                             <p id='detail-price'>$" . number_format($precio, 2, ',', '.') . "</p>
                             <div>
                             <p class='text'>$marca</p>
-                            </div>
                             <h4>Caracteristicas y especificaciones</h4>
-                            <p>$</p>
+                            <p>$descripcion</p>
                             <div class='button-container'>
-                                <button class='btn btn-secondary' id='back-button'>Volver a la lista</button>
-                                <button class='btn btn-success' id='contactarVendedorBtn' data-product-id='$id' data-title='$nombre' data-price='$precio' data-descripcion='$descripcion'>WhatsApp al Vendedor</button>
+                            <button class='btn btn-secondary' id='back-button'>Volver a la lista</button>
+                            <button class='btn btn-success' id='contactarVendedorBtn' data-product-id='$id' data-title='$nombre' data-price='$precio' data-descripcion='$descripcion'>WhatsApp al Vendedor</button>
+                            </div>
                             </div>
                         </div>
                     </div>
